@@ -1,0 +1,30 @@
+[
+    {
+        "image": "https://i.ibb.co/dgjrd96/child-Support.png",
+        "name": "Child Support",
+        "description": "Help children in need by volunteering your time or resources to support organizations that provide child care, education, and health services.",
+        "colorCode": "#FF7044",
+        "date": "2023-06-15"
+    },
+    {
+        "image": "https://i.ibb.co/KLLQySP/refuse-Shelter.png",
+        "name": "Refuge Shelter",
+        "description": "Provide a safe haven for those in need by volunteering at a shelter or donating to organizations that support refugees and asylum seekers.",
+        "colorCode": "#FFBD3E",
+        "date": "2023-06-20"
+    },
+    {
+        "image": "https://i.ibb.co/ZGDWVPZ/food-Charity.png",
+        "name": "Food Charity",
+        "description": "Help fight hunger by volunteering at a food bank or donating to organizations that provide meals and support to those in need.",
+        "colorCode": "#3F90FC",
+        "date": "2023-06-25"
+    },
+    {
+        "image": "https://i.ibb.co/bvddq2C/cloth-Swap.png",
+        "name": "Host a Clothing Swap",
+        "description": "Reduce waste and promote sustainable fashion by hosting a clothing swap event or donating clothes to organizations that support clothing reuse and recycling.",
+        "colorCode": "#421FCF",
+        "date": "2023-06-30"
+    }
+]
