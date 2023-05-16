@@ -68,6 +68,26 @@ async function run() {
 
         })
 
+
+        app.get ('/eventsAll', async (req, res) => { 
+
+
+
+            const result = await events.find().toArray();
+
+            res.send (result)
+        })
+
+
+        app.get ('/eventbyDate', async (req, res) => { 
+
+
+
+
+            const result = await events.find().sort( {date : -1 }).toArray();
+            res.send (result)
+        })
+
         app.post ('/allEvents', async(req, res) => { 
 
             const body = req.body;
@@ -92,6 +112,10 @@ async function run() {
 
 
         })
+
+
+
+
 
         app.get ('/totalItems', async (req, res) => {
 
