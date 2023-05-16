@@ -49,8 +49,17 @@ async function run() {
 
         app.get('/allEvents', async(req, res) => {
 
+
+
+
+            const page = parseInt(req.query.page) || 1; // Current page number, defaulting to 1 if not provided
+            const limit = parseInt(req.query.limit) || 10; // Number of items per page, defaulting to 10 if not provided
+          
+            // Calculate the skip value to determine the starting index of the items to fetch
+            const skip = (page) * limit;
+
             const cursor =  events.find()
-            const result = await cursor.toArray ()
+            const result = await cursor.skip(skip).limit(limit).toArray();
 
             res.send(result)
 
@@ -83,6 +92,27 @@ async function run() {
 
 
         })
+
+        app.get ('/totalItems', async (req, res) => {
+
+
+
+
+            const result = await events.estimatedDocumentCount();
+
+            res.send ({ totalProducts: result})
+
+
+
+
+
+
+        })
+
+
+
+
+
 
         const volunteers = database.collection('registered')
 
