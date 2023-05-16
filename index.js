@@ -78,6 +78,22 @@ async function run() {
             res.send (result)
         })
 
+        app.get ('/search/:text', async (req, res) => {
+
+
+
+            const text = req.params.text;
+
+            const result = await events
+            .find({
+              $or: [
+                { name: { $regex: text, $options: "i" } }
+              ],
+            })
+            .toArray();
+          res.send(result);
+         })
+
 
         app.get ('/eventbyDate', async (req, res) => { 
 
